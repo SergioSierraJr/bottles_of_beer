@@ -3,7 +3,7 @@ use std::str::FromStr;
 
 fn main() {
     let mut bottles_of_beer: i32;
-    if env::args().len() > 2 {
+    if env::args().len() >= 2 {
         match i32::from_str(&env::args().collect::<Vec<_>>()[1]) {
             Ok(..) => bottles_of_beer = i32::from_str(&env::args().collect::<Vec<_>>()[1]).unwrap(),
             _err => {
